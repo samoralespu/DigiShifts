@@ -1,7 +1,5 @@
 import DashboardLayout from '@/views/Layout/DashboardLayout.vue';
-import AuthLayout from '@/views/Pages/AuthLayout.vue';
 
-import NotFound from '@/views/NotFoundPage.vue';
 
 const routes = [{
         path: '/',

@@ -3,18 +3,68 @@
       <b-row>
         <b-col align="center">
           <b-card>   
+          <span style="opacity:0;">_</span>
             <b-row>
+            
               <b-col align="center">
-                <h1 style="font-size: 50px">TURNO:</h1>
+                <h1 style="font-size: 50px">TURNO</h1>
               </b-col>
               <b-col align="center">
-                <h1 style="font-size: 50px">99</h1>
+                <h1 style="font-size: 50px">{{ this.turns.number[0] }}</h1>
               </b-col>
               <b-col align="center">
                 <h1 style="font-size: 50px">MODULO:</h1>
               </b-col>
               <b-col align="center">
-                <h1 style="font-size: 50px">4</h1>
+                <h1 style="font-size: 50px">{{ this.turns.stand[0] }}</h1>
+              </b-col>
+            </b-row>
+            <span style="opacity:0;">_</span>
+          </b-card>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+        <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <h1>TURNO</h1>
+                <h2>{{ this.turns.number[1] }}</h2>
+              </b-col>
+              <b-col align="center">
+                <h1>MODULO</h1>
+                <h2>{{ this.turns.stand[1] }}</h2>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col>
+        <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <h1>TURNO</h1>
+                <h2>{{ this.turns.number[2] }}</h2>
+              </b-col>
+              <b-col align="center">
+                <h1>MODULO</h1>
+                <h2>{{ this.turns.stand[2] }}</h2>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col>
+        <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <h1>TURNO</h1>
+                <h2>{{ this.turns.number[3] }}</h2>
+              </b-col>
+              <b-col align="center">
+                <h1>MODULO</h1>
+                <h2>{{ this.turns.stand[3] }}</h2>
               </b-col>
             </b-row>
           </b-card>
@@ -27,11 +77,11 @@
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
+                <h2 class="text-nowrap">{{ this.turns.number[4] }}</h2>
               </b-col>
               <b-col align="center">
                 <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
+                <h2>{{ this.turns.stand[4] }}</h2>
               </b-col>
             </b-row>
           </b-card>
@@ -42,11 +92,11 @@
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
+                <h2>{{ this.turns.number[5] }}</h2>
               </b-col>
               <b-col align="center">
                 <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
+                <h2>{{ this.turns.stand[5] }}</h2>
               </b-col>
             </b-row>
           </b-card>
@@ -57,156 +107,66 @@
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
+                <h2>{{ this.turns.number[6] }}</h2>
               </b-col>
               <b-col align="center">
                 <h1>MODULO</h1>
-                <h2 class="text-success mr-1 headertekst">4</h2>
+                <h2>{{ this.turns.stand[6] }}</h2>
               </b-col>
             </b-row>
           </b-card>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col xl="3" md="4">
-        <span style="opacity:0;">_</span>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-        <span style="opacity:0;">_</span>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-        <span style="opacity:0;">_</span>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-        <span style="opacity:0;">_</span>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>TURNO</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>MODULO</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-      </b-row>
-      <div style="height: 500px;  text-align:center;line-height:200px;">
-        <span style="opacity:0;">_</span>
-      </div>
     </base-header>
 </template>
 <script>
-  // Charts
-  import * as chartConfigs from '@/components/Charts/config';
-  import LineChart from '@/components/Charts/LineChart';
-  import BarChart from '@/components/Charts/BarChart';
+import http from "../http-common";
 
-  // Components
-  import BaseProgress from '@/components/BaseProgress';
-  import StatsCard from '@/components/Cards/StatsCard';
+export default {
+  components: {
 
-  // Tables
-  import SocialTrafficTable from './Dashboard/SocialTrafficTable';
-  import PageVisitsTable from './Dashboard/PageVisitsTable';
-
-  export default {
-    components: {
-      LineChart,
-      BarChart,
-      BaseProgress,
-      StatsCard,
-      PageVisitsTable,
-      SocialTrafficTable
-    },
-    data() {
-      return {
-        bigLineChart: {
-          allData: [
-            [0, 20, 10, 30, 15, 40, 20, 60, 60],
-            [0, 20, 5, 25, 10, 30, 15, 40, 40]
-          ],
-          activeIndex: 0,
-          chartData: {
-            datasets: [
-              {
-                label: 'Performance',
-                data: [0, 20, 10, 30, 15, 40, 20, 60, 60],
-              }
-            ],
-            labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          },
-          extraOptions: chartConfigs.blueChartOptions,
-        },
-        redBarChart: {
-          chartData: {
-            labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            datasets: [{
-              label: 'Sales',
-              data: [25, 20, 30, 22, 17, 29]
-            }]
-          },
-          extraOptions: chartConfigs.blueChartOptions
-        }
-      };
-    },
-    methods: {
-      initBigChart(index) {
-        let chartData = {
-          datasets: [
-            {
-              label: 'Performance',
-              data: this.bigLineChart.allData[index]
-            }
-          ],
-          labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        };
-        this.bigLineChart.chartData = chartData;
-        this.bigLineChart.activeIndex = index;
+  },
+  data() {
+    return {
+      turns: {
+        stand: [0,0,0,0,0,0,0,0],
+        number: [0,0,0,0,0,0,0,0],
       }
+    };
+  },
+  methods: {
+    getQueue() {
+      http.get("/FreeStands/")
+      .then(response => {
+        let len = response.data.length;
+        console.log("len:" + len);
+        this.turns.stand = [];
+        this.turns.number = [];
+        if(len >= 8){
+          for(let i = 0; i<8; i++){
+            this.turns.stand.push(response.data[i].assignedNumber);
+            this.turns.number.push(response.data[i].assignedStand);
+          }
+        } else {
+          for(let i = 0; i<len; i++){
+            this.turns.stand.push(response.data[i].assignedNumber);
+            this.turns.number.push(response.data[i].assignedStand);
+          }
+          for(let i = 0; i< (8-len); i++){
+            this.turns.stand.push(0);
+            this.turns.number.push(0);
+          }
+        }
+      })
+      .catch(e => {
+        console.log(e);
+      });
     },
-    mounted() {
-      this.initBigChart(0);
-    }
-  };
+  },
+  mounted() {
+    this.getQueue();
+  }
+};
 </script>
 <style>
 .el-table .cell{
