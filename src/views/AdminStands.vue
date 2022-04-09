@@ -1,129 +1,117 @@
 <template>
-  <div>
     <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
       <b-row>
-        <b-col align="center">
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
           <b-card>   
             <b-row>
               <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
+                <base-button type="primary">Estoy disponible</base-button>
               </b-col>
               <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
+                <h1 style="font-size: 50px">1</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">2</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">3</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">4</h1>
               </b-col>
             </b-row>
           </b-card>
         </b-col>
       </b-row>
-      <span style="opacity:0;">_</span>
       <b-row>
-        <b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
           <b-card>   
             <b-row>
               <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
+                <base-button type="primary">Estoy disponible</base-button>
               </b-col>
               <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
+                <h1 style="font-size: 50px">5</h1>
               </b-col>
             </b-row>
           </b-card>
         </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">6</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">7</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+        <b-col xl="3" md="6">
+          <span style="opacity:0;">_</span>
+          <b-card>   
+            <b-row>
+              <b-col align="center">
+                <base-button type="primary">Estoy disponible</base-button>
+              </b-col>
+              <b-col align="center">
+                <h1 style="font-size: 50px">8</h1>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+      </b-row>
+      <div style="height: 150px;  text-align:center;line-height:200px;">
         <span style="opacity:0;">_</span>
-        <b-col>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1 headertekst">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-      </b-row>
-      <span style="opacity:0;">_</span>
-      <b-row>
-        <b-col xl="3" md="4">
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-        <b-col xl="3" md="6">
-          <b-card>   
-            <b-row>
-              <b-col align="center">
-                <h1>Turno</h1>
-                <h2 class="text-nowrap">99</h2>
-              </b-col>
-              <b-col align="center">
-                <h1>Modulo</h1>
-                <h2 class="text-success mr-1">4</h2>
-              </b-col>
-            </b-row>
-          </b-card>
-        </b-col>
-      </b-row>
+      </div>
     </base-header>
-  </div>
 </template>
 <script>
   // Charts
