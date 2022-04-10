@@ -13,6 +13,7 @@
 </template>
 <script>
 import http from "../http-common";
+import EventBus from "../event-bus";
 
 export default {
   components: {
@@ -27,11 +28,8 @@ export default {
     getClientQueue() {
       http
         .get("turn").then(response => {
-          console.log(response.data[0].turnId);
-          //localStorage.setItem("ClientTurn", response.data[0]);
-          //this.$router.push("/ClientQueue");
-          //this.buyerOrders = response.data;
-          //
+          localStorage.setItem("ClientTurn", response.data[0].turnId);
+          this.$router.push("/ClientQueue");
         })
         .catch(e => console.log(e));
     },

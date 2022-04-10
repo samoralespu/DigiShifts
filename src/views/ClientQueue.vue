@@ -8,7 +8,7 @@
                 <h1 style="font-size: 42px">TURNO:</h1>
               </b-col>
               <b-col align="center">
-                <h1 style="font-size: 42px">{{ this.turns.number[0] }}</h1>
+                <h1 style="font-size: 42px">{{ this.numTurn }}</h1>
               </b-col>
             </b-row>
           </b-card>
@@ -142,6 +142,7 @@ export default {
   },
   data() {
     return {
+      numTurn: 0,
       turns: {
         stand: [0,0,0,0,0,0,0,0],
         number: [0,0,0,0,0,0,0,0],
@@ -178,8 +179,13 @@ export default {
     },
   },
   mounted() {
+    if (localStorage.getItem("ClientTurn")) {
+      this.numTurn = JSON.parse(localStorage.getItem("ClientTurn"));
+    } else {
+      this.numTurn = 0;
+    }
     this.getQueue();
-  }
+  },
 };
 </script>
 <style>
