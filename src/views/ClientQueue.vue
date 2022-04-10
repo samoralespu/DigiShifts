@@ -188,22 +188,26 @@ export default {
       this.numTurn = 0;
     }
     this.getQueue();
-
+    
     this.socket = await new WebSocket('wss://localhost:3000/ws'); 
-        // When it opens, console log that it has opened. and send a message to the server to let it know we exist
-        this.socket.onopen = () => {
-            console.log('Websocket connected.');
-            this.sendMessage(JSON.stringify({"message" : "Hello, server."}));
-        }
+    // When it opens, console log that it has opened. and send a message to the server to let it know we exist
+    this.socket.onopen = () => {
+        console.log('Websocket connected.');
+        this.sendMessage(JSON.stringify({"message" : "Hello, server."}));
+    }
 
-        // When we receive a message from the server, we can capture it here in the onmessage event.
-        this.socket.onmessage = (event) => {
-            // We can parse the data we know to be JSON, and then check it for data attributes
-            let parsedMessage = JSON.parse(event.data);
-            // If those data attributes exist, we can then console log or show data to the user on their web page.
-            console.log("MessageReceived: " + parsedMessage);
-        }
-
+    // When we receive a message from the server, we can capture it here in the onmessage event.
+    this.socket.onmessage = (event) => {
+        // We can parse the data we know to be JSON, and then check it for data attributes
+        let parsedMessage = JSON.parse(event.data);
+        // If those data attributes exist, we can then console log or show data to the user on their web page.
+        console.log("MessageReceived: " + parsedMessage);
+    }
+  },
+  created() {
+    setInterval(function () {
+      this.getQueue();
+    }.bind(this), 5000);
   },
 };
 </script>
