@@ -135,6 +135,7 @@
 </template>
 <script>
 import http from "../http-common";
+import EventBus from "../event-bus";
 
 export default {
   components: {
@@ -185,6 +186,24 @@ export default {
       this.numTurn = 0;
     }
     this.getQueue();
+    this.$root.$on("updateStand", data => {
+      console.log(data);
+    });
+  },
+  created() {
+    EventBus.$on("updateStand", data => {
+      console.log(data);
+    });
+    setInterval(function () {
+		  console.log("actualizado");
+    }.bind(this), 5000);
+  },
+  watch: {
+    question(newQuestion, oldQuestion) {
+      if (newQuestion.indexOf('?') > -1) {
+        this.getAnswer()
+      }
+    }
   },
 };
 </script>
