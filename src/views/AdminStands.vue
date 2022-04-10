@@ -3,7 +3,7 @@
       <b-row>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(1)">Estoy disponible</base-button>
@@ -16,7 +16,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(2)">Estoy disponible</base-button>
@@ -29,7 +29,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(3)">Estoy disponible</base-button>
@@ -42,7 +42,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(4)">Estoy disponible</base-button>
@@ -57,7 +57,7 @@
       <b-row>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(5)">Estoy disponible</base-button>
@@ -70,7 +70,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(6)">Estoy disponible</base-button>
@@ -83,7 +83,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(7)">Estoy disponible</base-button>
@@ -96,7 +96,7 @@
         </b-col>
         <b-col xl="3" md="6">
           <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <base-button type="primary" v-on:click="getClientQueue(8)">Estoy disponible</base-button>
@@ -133,7 +133,7 @@ export default {
 
       console.log(event);
 
-      http.put("/stand/" + data)
+      http.post("stand/" + data)
       .then(response => {
         console.log("actualizado el " + data);
       })
@@ -142,11 +142,11 @@ export default {
       });
     },
     resetTurns(){
-      
+
     },
   },
   mounted() {
-    
+
   }
 };
 </script>

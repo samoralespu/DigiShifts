@@ -2,7 +2,7 @@
     <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
       <b-row>
         <b-col align="center">
-          <b-card style="background-color:#11cdef;">   
+          <b-card style="background-color:#11cdef;">
             <b-row>
               <b-col align="center">
                 <h1 style="font-size: 42px">TURNO:</h1>
@@ -17,7 +17,7 @@
       <span style="opacity:0;">_</span>
       <b-row>
         <b-col align="center">
-          <b-card>   
+          <b-card>
           <span style="opacity:0;">_</span>
             <b-row>
               <b-col align="center">
@@ -40,7 +40,7 @@
       <b-row>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -55,7 +55,7 @@
         </b-col>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -70,7 +70,7 @@
         </b-col>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -87,7 +87,7 @@
       <b-row>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -102,7 +102,7 @@
         </b-col>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -117,7 +117,7 @@
         </b-col>
         <b-col>
         <span style="opacity:0;">_</span>
-          <b-card>   
+          <b-card>
             <b-row>
               <b-col align="center">
                 <h1>TURNO</h1>
@@ -152,7 +152,7 @@ export default {
   },
   methods: {
     getQueue() {
-      http.get("/FreeStands/")
+      http.get("turns",{"headers":{"Access-Control-Allow-Origin":"*"},withCredentials:false})
       .then(response => {
         let len = response.data.length;
         console.log("len:" + len);
@@ -192,9 +192,9 @@ export default {
   },
   created() {
 
-    /*setInterval(function () {
-		  console.log("actualizado");
-    }.bind(this), 5000);*/
+    setInterval(function () {
+      this.getQueue();
+    }.bind(this), 5000);
     //const WebSocket = require('ws');
     //var socket = new WebSocket('ws://localhost:3000');
     /*console.log("Starting webSocket connection");
