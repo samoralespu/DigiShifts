@@ -135,7 +135,6 @@
 </template>
 <script>
 import http from "../http-common";
-import EventBus from "../event-bus";
 
 export default {
   components: {
@@ -144,6 +143,7 @@ export default {
   data() {
     return {
       numTurn: 0,
+      connection: null,
       turns: {
         stand: [0,0,0,0,0,0,0,0],
         number: [0,0,0,0,0,0,0,0],
@@ -191,19 +191,46 @@ export default {
     });
   },
   created() {
-    EventBus.$on("updateStand", data => {
-      console.log(data);
-    });
-    setInterval(function () {
+
+    /*setInterval(function () {
 		  console.log("actualizado");
-    }.bind(this), 5000);
-  },
-  watch: {
-    question(newQuestion, oldQuestion) {
-      if (newQuestion.indexOf('?') > -1) {
-        this.getAnswer()
-      }
+    }.bind(this), 5000);*/
+    //const WebSocket = require('ws');
+    //var socket = new WebSocket('ws://localhost:3000');
+    /*console.log("Starting webSocket connection");
+    const WebSocket = require('ws');
+    var socket = new WebSocket('ws://localhost:3000');
+
+    socket.onopen = function(event) {
+
+    // Send an initial message
+      socket.send('I am the client and I\'m listening!');
+
+      // Listen for messages
+      socket.onmessage = function(event) {
+          console.log('Client received a message',event);
+      };
+
+      // Listen for socket closes
+      socket.onclose = function(event) {
+          console.log('Client notified socket has closed',event);
+      };
+
+      // To close the socket....
+      socket.close()
+
+    };
+
+    this.connection.onopen = function(event){
+      console.log(event);
+      console.log("Succesfully webSocket connection");
     }
+
+    this.connection.onmessage = function(event){
+      console.log(event);
+      console.log("Succesfully webSocket connection message");
+    }*/
+
   },
 };
 </script>

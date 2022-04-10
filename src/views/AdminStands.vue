@@ -112,13 +112,12 @@
         <span style="opacity:0;">_</span>
       </div>
       <b-col align="center">
-        <base-button type="primary" v-on:click="ResetTurns()">Reset</base-button>
+        <base-button type="primary" v-on:click="resetTurns()">Reset</base-button>
       </b-col>
     </base-header>
 </template>
 <script>
 import http from "../http-common";
-import EventBus from "../event-bus";
 
 export default {
   components: {
@@ -131,7 +130,9 @@ export default {
   },
   methods: {
     getClientQueue(data) {
-      this.$root.$emit("updateStand", data);
+
+      console.log(event);
+
       http.put("/stand/" + data)
       .then(response => {
         console.log("actualizado el " + data);
@@ -140,8 +141,8 @@ export default {
         console.log(e);
       });
     },
-    ResetTurns(){
-      this.$root.$emit("updateStand", data);
+    resetTurns(){
+      
     },
   },
   mounted() {
