@@ -135,6 +135,8 @@
 </template>
 <script>
 import http from "../http-common";
+import VueNativeSock from 'vue-native-websocket'
+
 
 export default {
   components: {
@@ -152,7 +154,7 @@ export default {
   },
   methods: {
     getQueue() {
-      http.get("turns",{"headers":{"Access-Control-Allow-Origin":"*"},withCredentials:false})
+      http.get("turns",{withCredentials:false})
       .then(response => {
         let len = response.data.length;
         console.log("len:" + len);
@@ -179,57 +181,28 @@ export default {
       });
     },
   },
-  mounted() {
+  async mounted() {
     if (localStorage.getItem("ClientTurn")) {
       this.numTurn = JSON.parse(localStorage.getItem("ClientTurn"));
     } else {
       this.numTurn = 0;
     }
     this.getQueue();
-    this.$root.$on("updateStand", data => {
-      console.log(data);
-    });
-  },
-  created() {
 
-    setInterval(function () {
-      this.getQueue();
-    }.bind(this), 5000);
-    //const WebSocket = require('ws');
-    //var socket = new WebSocket('ws://localhost:3000');
-    /*console.log("Starting webSocket connection");
-    const WebSocket = require('ws');
-    var socket = new WebSocket('ws://localhost:3000');
+    this.socket = await new WebSocket('wss://localhost:3000/ws'); 
+        // When it opens, console log that it has opened. and send a message to the server to let it know we exist
+        this.socket.onopen = () => {
+            console.log('Websocket connected.');
+            this.sendMessage(JSON.stringify({"message" : "Hello, server."}));
+        }
 
-    socket.onopen = function(event) {
-
-    // Send an initial message
-      socket.send('I am the client and I\'m listening!');
-
-      // Listen for messages
-      socket.onmessage = function(event) {
-          console.log('Client received a message',event);
-      };
-
-      // Listen for socket closes
-      socket.onclose = function(event) {
-          console.log('Client notified socket has closed',event);
-      };
-
-      // To close the socket....
-      socket.close()
-
-    };
-
-    this.connection.onopen = function(event){
-      console.log(event);
-      console.log("Succesfully webSocket connection");
-    }
-
-    this.connection.onmessage = function(event){
-      console.log(event);
-      console.log("Succesfully webSocket connection message");
-    }*/
+        // When we receive a message from the server, we can capture it here in the onmessage event.
+        this.socket.onmessage = (event) => {
+            // We can parse the data we know to be JSON, and then check it for data attributes
+            let parsedMessage = JSON.parse(event.data);
+            // If those data attributes exist, we can then console log or show data to the user on their web page.
+            console.log("MessageReceived: " + parsedMessage);
+        }
 
   },
 };

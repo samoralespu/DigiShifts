@@ -136,7 +136,7 @@ export default {
   },
   methods: {
     getQueue() {
-      http.get("/FreeStands/")
+      http.get("turns",{withCredentials:false})
       .then(response => {
         let len = response.data.length;
         console.log("len:" + len);
