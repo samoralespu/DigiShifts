@@ -139,7 +139,7 @@ export default {
       http.get("turns",{withCredentials:false})
       .then(response => {
         let len = response.data.length;
-        console.log("len:" + len);
+        //console.log("len:" + len);
         this.turns.stand = [];
         this.turns.number = [];
         if(len >= 8){
