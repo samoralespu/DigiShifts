@@ -112,7 +112,7 @@
         <span style="opacity:0;">_</span>
       </div>
       <b-col align="center">
-        <base-button type="primary" v-on:click="resetTurns()">Reset</base-button>
+        <base-button type="danger" v-on:click="resetTurns()">Reset</base-button>
       </b-col>
     </base-header>
 </template>
