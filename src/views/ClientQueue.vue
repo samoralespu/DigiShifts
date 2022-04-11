@@ -21,13 +21,13 @@
           <span style="opacity:0;">_</span>
             <b-row>
               <b-col align="center">
-                <h1 style="font-size: 50px">TURNO</h1>
+                <h1 style="font-size: 50px">MODULO:</h1>
               </b-col>
               <b-col align="center">
                 <h1 style="font-size: 50px">{{ this.turns.number[0] }}</h1>
               </b-col>
               <b-col align="center">
-                <h1 style="font-size: 50px">MODULO:</h1>
+                <h1 style="font-size: 50px">TURNO:</h1>
               </b-col>
               <b-col align="center">
                 <h1 style="font-size: 50px">{{ this.turns.stand[0] }}</h1>
@@ -43,11 +43,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2>{{ this.turns.number[1] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[1] }}</h2>
               </b-col>
             </b-row>
@@ -58,11 +58,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2>{{ this.turns.number[2] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[2] }}</h2>
               </b-col>
             </b-row>
@@ -73,11 +73,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2>{{ this.turns.number[3] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[3] }}</h2>
               </b-col>
             </b-row>
@@ -90,11 +90,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2 class="text-nowrap">{{ this.turns.number[4] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[4] }}</h2>
               </b-col>
             </b-row>
@@ -105,11 +105,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2>{{ this.turns.number[5] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[5] }}</h2>
               </b-col>
             </b-row>
@@ -120,11 +120,11 @@
           <b-card>
             <b-row>
               <b-col align="center">
-                <h1>TURNO</h1>
+                <h1>MODULO:</h1>
                 <h2>{{ this.turns.number[6] }}</h2>
               </b-col>
               <b-col align="center">
-                <h1>MODULO</h1>
+                <h1>TURNO:</h1>
                 <h2>{{ this.turns.stand[6] }}</h2>
               </b-col>
             </b-row>
@@ -189,7 +189,7 @@ export default {
     }
     this.getQueue();
     
-    this.socket = await new WebSocket('wss://localhost:3000/ws'); 
+    /*this.socket = await new WebSocket('wss://localhost:3000/ws'); 
     // When it opens, console log that it has opened. and send a message to the server to let it know we exist
     this.socket.onopen = () => {
         console.log('Websocket connected.');
@@ -202,7 +202,7 @@ export default {
         let parsedMessage = JSON.parse(event.data);
         // If those data attributes exist, we can then console log or show data to the user on their web page.
         console.log("MessageReceived: " + parsedMessage);
-    }
+    }*/
   },
   created() {
     setInterval(function () {
