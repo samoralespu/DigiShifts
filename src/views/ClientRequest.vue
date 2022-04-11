@@ -27,7 +27,7 @@ export default {
   methods: {
     getClientQueue() {
       http
-        .post("turn/ask", {withCredentials:false}).then(response => {
+        .post("turn/ask", {withCredentials:false}, {withCredentials:false}).then(response => {
           console.log(response.data);
           localStorage.setItem("ClientTurn", response.data.turnId);
           this.$router.push("/ClientQueue");

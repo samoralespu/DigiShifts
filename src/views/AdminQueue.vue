@@ -165,7 +165,12 @@ export default {
   },
   mounted() {
     this.getQueue();
-  }
+  },
+  created() {
+    setInterval(function () {
+      this.getQueue();
+    }.bind(this), 5000);
+  },
 };
 </script>
 <style>
